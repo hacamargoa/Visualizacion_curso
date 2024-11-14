@@ -6,19 +6,23 @@ library(dplyr)
 arg_prov<- get_geo(geo = "ARGENTINA", level = "provincia")
 arg_dep<- get_geo(geo = "ARGENTINA", level = "departamento")
 
+plot(arg_dep)
+
 ggplot(data = arg_prov) +
   geom_sf(fill = "lightblue", color = "darkblue", size = 0.3) +
   labs(title = "Map of Argentina by Provinces") +
   theme_minimal()
 
-#Pipes
+#Pipes tuberias
 Ejemplo<-read.table("C:/Users/camargo-h/Documents/Projects/Personal/Argentina/Curso/Clase 7/Datos_clase7_reg.txt",h = T)
-Ejemplo<-subset(Ejemplo,Lat >25)
+Ejemplo<-subset(Ejemplo,Lat >30)
 Ejemplo<-select(Ejemplo,c(Lon,Lat))
+rm(Ejemplo)
 
 Ejemplo<-read.table("C:/Users/camargo-h/Documents/Projects/Personal/Argentina/Curso/Clase 7/Datos_clase7_reg.txt",h = T)%>%
-subset(Lat >25)%>%
+subset(Lat >30)%>%
 select(Lon,Lat)
+
 
 get_geo("CATAMARCA")%>%
   add_geo_codes()%>%
