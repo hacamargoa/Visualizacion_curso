@@ -40,12 +40,12 @@ get_geo("CATAMARCA") %>%
 
 ###GITHUB
 
-get_geo("LA RIOJA") %>%
+get_geo("TUCUMAN") %>%
   leaflet::leaflet() %>%
   leaflet::addPolygons() %>%
   addArgTiles()
 
-p<-get_geo("LA RIOJA")%>%
+p<-get_geo("TUCUMAN")%>%
   add_geo_codes()
 
 plot(p)

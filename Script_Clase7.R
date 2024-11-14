@@ -4,7 +4,7 @@ library(sf)
 install.packages("fields")
 library(fields)
 
-USA <- ne_countries(country = "United States of America", returnclass = "sf")
+Alemania <- ne_countries(country = "Germany", returnclass = "sf")
 trigo<-raster("../Clase 3/winter_and_spring_wheat_areas_phase3.nc4")
 plot(trigo,main="Areas de trigo mundiales (ha)")
 
