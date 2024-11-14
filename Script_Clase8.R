@@ -34,5 +34,18 @@ get_geo("CATAMARCA") %>%
   leaflet::addPolygons() %>%
   addArgTiles()
 
+###GITHUB
+
+get_geo("LA RIOJA") %>%
+  leaflet::leaflet() %>%
+  leaflet::addPolygons() %>%
+  addArgTiles()
+
+p<-get_geo("LA RIOJA")%>%
+  add_geo_codes()
+
+plot(p)
+
+
 
 
